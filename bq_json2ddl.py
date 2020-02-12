@@ -102,7 +102,7 @@ def main(argv):
   if "friendlyName" in schema:
       obj_options["friendly_name"] = '"{}"'.format(schema["friendlyName"])  
   if "description" in schema:
-      obj_options["description"] = '"{}"'.format(schema["description"])
+      obj_options["description"] = '"""{}"""'.format(schema["description"])
   if "labels" in schema:
       obj_options["labels"] = schema["labels"]
   if "requirePartitionFilter" in schema:
