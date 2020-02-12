@@ -1,5 +1,5 @@
-# BigQuery-json2DDL
-Parse BigQuery schema in JSON format to DDL statement
+# BigQuery json2DDL
+Parse BigQuery schema in JSON format and convert it to a DDL statement.
 
 Usage: `bq_json2ddl.py <schema.json> <outputfile>`
   
