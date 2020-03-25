@@ -3,10 +3,9 @@ import json
 from jinja2 import Template
 
 def main(argv):
-  if len(argv) < 2:
-    print('usage: bq_json2ddl.py <schema.json> <outputfile>')
+  if len(argv) < 1:
+    print('usage: bq_json2ddl.py <schema.json>')
     sys.exit()
-  output_file = argv[1]
 
   json_file = open(argv[0], 'r')
   schema = json.load(json_file)
@@ -114,9 +113,7 @@ def main(argv):
   ddl = ddl_template.render(schema = schema, 
                             partitioning = obj_partition,
                             options = obj_options)
-  # print(ddl)
-  with open(output_file, 'w') as fw:
-    fw.write(ddl)
+  print(ddl)
 
 if __name__ == '__main__':
     main(sys.argv[1:])
