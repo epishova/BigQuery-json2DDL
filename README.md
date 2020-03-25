@@ -187,3 +187,6 @@ $ cat transactions.ddl
 This version of the data is no longer being updated and will be removed within the next 15 days."""
   )
 ```
+
+Or just run it like this:
+`bq show --format=prettyjson bigquery-public-data:bitcoin_blockchain.transactions | python bq_json2ddl.py /dev/stdin`
