@@ -1,7 +1,7 @@
 # BigQuery json2DDL
 Parse BigQuery schema in JSON format and convert it to a DDL statement.
 
-Usage: `bq_json2ddl.py <schema.json> <outputfile>`
+Usage: `bq_json2ddl.py <schema.json>`
   
 Example: 
 ```
@@ -150,7 +150,7 @@ $ cat transactions.json
   }, 
   "type": "TABLE"
 }
-$ python bq_json2ddl.py ./transactions.json ./transactions.ddl
+$ python bq_json2ddl.py ./transactions.json > ./transactions.ddl
 $ cat transactions.ddl 
 
   CREATE TABLE `bigquery-public-data`.bitcoin_blockchain.transactions
